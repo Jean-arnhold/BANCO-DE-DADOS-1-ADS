@@ -1,0 +1,36 @@
+Chave primárias: (pk)
+Chave estrangeiras: (fk)
+
+
+Exercício_Pedido_Correio
+
+funcionario: numero(pk), nome, sobrenome, cep
+cliente: numero(pk), nome, sobrenome, cep
+peca: numero(pk), nome, preco, quantidade
+pedido: numero(pk), data_recebimento, data_esperada, data_entrega_real,
+funcionario_numero(fk), cliente_numero(fk)
+pedido_peca: pedido_numero(pk, fk), peca_numero(pk, fk), quantidade
+
+Exercício_Banco
+
+agencia: numero(pk), cidade
+funcionario: codigo(pk), nome, endereco, salario, agencia_numero(fk)
+cliente: codigo(pk), nome, RG, cidade
+conta: numero(pk), saldo, agencia_numero(fk), cliente numero(fk)
+transacoes: numero(pk), data, valor, conta_numero(fk)
+
+Exercício_Hamburgueria
+
+Tamanho: numero(pk), descrição
+Hamburger: numero(pk), nome
+Tamanho: numero(pk), descrição
+TamanhoHamburger: IDHamburger, IDtamanho, preço
+Ingredientes: numero(pk), descrição
+IngredienteHamburger: IDhamburger(fk), IDingrediente(fk)
+Pedido: numero(pk), IDhamburger(fk), IDFuncRegistra(fk), IDFuncEntrega(fk), IDbairro(fk) data, hora, observações, endereço entrega
+HamburgerPedido: IDpedido(fk) IDhamburger(fk), tamanho, preço, quantidade
+Cliente: cpf(pk), endereço, telefone, nome
+Bairro: numero(pk), nome, tempo entrega
+
+
+
