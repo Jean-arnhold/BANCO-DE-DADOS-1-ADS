@@ -1,0 +1,12 @@
+Propritário: id_proprietário(pk), nome, endereço
+
+pessoa: id_proprietario(pk, fk), cpf, num_carteira_motorista
+banco: CNPJ, id_proprietario(pk, fk)
+empresa: CNPJ, id_proprietario(pk, fk)
+
+veiculo registrado: cod_veiculo(pk), placa, ano, modelo, marca
+
+carro: cód_veiculo(pk, fk), estilo
+caminhão: cód_veiculo(pk,fk), capacidade_peso
+
+dono: id_proprietario(pk, fk), cód_veiculo(pk, fk), data_compra, alienado
