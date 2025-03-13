@@ -1,0 +1,13 @@
+O sistema deve permitir que um cliente faça uma reserva.
+
+Cada reserva deve registrar a quantidade de pessoas, a data da reserva, um código único e o status da reserva.
+
+Uma reserva pode estar associada a uma ou mais mesas, mas uma mesa pode estar vinculada a no máximo uma reserva por vez.
+
+O sistema deve permitir o registro de pedidos, com um código único e data/hora de criação.
+
+Um pedido deve estar associado a uma mesa específica.
+
+Cada cliente pode fazer uma ou mais reservas, mas cada reserva pertence a apenas um cliente.
+
+Cada pedido está vinculado a uma única mesa, mas uma mesa pode ter vários pedidos ao longo do tempo.
