@@ -1,0 +1,9 @@
+Cidade: código (pk), nome, estado, população
+Ponto Turístico: código(pk), descrição, endereço, data fundação, códigoCidade (Fk)
+Igreja: codigoPontoTuristico(pk, fk), estilo_construção
+Museu: codigoPontoTuristico(pk, fk), numero_de_salas
+Fundador: código (pk), nome, data nascimento, data morte(null), nacionalidade, profissão
+Fundador_Museu: codigoFundador (fk), codigoPontoTuristico(fk)
+Restaurante: código(pk), nome, endereço, categoria, códigoCidade (fk)
+Hotel: código (pk), nome, categoria, códigoCidade(fk)
+Quarto: código (pk), numero, tipo, valor, codigoHotel (fk)
