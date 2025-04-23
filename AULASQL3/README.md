@@ -74,5 +74,5 @@ funcionario.pnome,
 funcionario.Unome,	
 funcionario.Endereco
 FROM departamento JOIN funcionario ON funcionario.Dnr = departamento.Dnumero 
-GROUP BY Dnr;
+WHERE departamento.dnome="pesquisa";
 ```
