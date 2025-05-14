@@ -187,3 +187,65 @@ WHERE f.Cpf NOT IN (
  ```
 
  ## 13. Listar os nomes dos gerentes que têm pelo menos um dependente.
+
+ ```sql
+SELECT f.Pnome
+FROM funcionario f INNER JOIN departamento d ON f.Cpf=d.Cpf_gerente
+WHERE f.Cpf IN (SELECT de.fcpf FROM dependente de);
+ ```
+
+## 14
+ ```sql
+SELECT f.Pnome
+FROM funcionario f
+INNER JOIN trabalha_em te ON f.Cpf=te.Fcpf
+INNER JOIN projeto p ON te.Pnr=p.Projnumero
+WHERE f.Dnr=5 AND
+p.Projnome="ProdutoX" AND
+te.Horas > 10;
+  ```
+
+## 15
+
+```sql
+SELECT f.pnome, d.Nome_dependente
+FROM funcionario f JOIN dependente d ON f.Cpf=d.Fcpf
+WHERE f.Pnome=d.Nome_dependente;
+
+```
+
+## 16
+
+```sql
+SELECT p.Projnome, SUM(t.Horas)
+FROM projeto p JOIN trabalha_em t ON p.Projnumero=t.Pnr
+GROUP BY p.Projnome;
+
+```
+
+## 17 
+
+```sql
+
+SELECT D.Dnome, AVG(f.Salario)
+FROM funcionario f JOIN departamento d ON f.Dnr=d.Dnumero
+GROUP BY D.Dnumero;
+
+```
+
+## 18
+
+```sql
+SELECT AVG(f.Salario)
+FROM funcionario f
+WHERE f.Sexo='F';
+
+``` 
+
+## 19
+
+```sql 
+SELECT f.Unome
+FROM funcionario f JOIN departamento da ON f.Cpf=da.Cpf_gerente
+WHERE da.Cpf_gerente NOT IN (SELECT de.fcpf FROM dependente de);
+```
